@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    [SerializeField] float speedProjectile = 1f;
+    [SerializeField] float speed = 1f;
    
     void Update()
     {
-        transform.Translate(Vector2.right * speedProjectile * Time.deltaTime);
+        transform.Translate(Vector2.right * speed * Time.deltaTime);
     }
 }
