@@ -15,9 +15,11 @@ public class Projectile : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         var health = collision.GetComponent<Health>();
-        if(health != null)
+        var attacker = collision.GetComponent<Attacker>();
+        if(health && attacker)
         {
             health.DealDamage(damage);
+            Destroy(gameObject);
         }
     }
 
