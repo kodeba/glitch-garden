@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Attacker : MonoBehaviour
 {
-    [SerializeField] int healthPoint = 100;
-    float currentSpeed = 1f;
+    float currentSpeed = 0f;
 
     void Update()
     {
@@ -15,24 +14,6 @@ public class Attacker : MonoBehaviour
     void SetMovementSpeed(float speed)
     {
         currentSpeed = speed;
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        var projectile = collision.gameObject.GetComponent<Projectile>();
-        if (projectile != null)
-        {
-            healthPoint -= projectile.GetDamage();
-            CheckHealth();
-        }
-    }
-
-    private void CheckHealth()
-    {
-        if(healthPoint <= 0)
-        {
-            //TODO: Death Method
-        }
     }
 
 }

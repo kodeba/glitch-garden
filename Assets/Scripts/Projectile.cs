@@ -5,16 +5,20 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     [SerializeField] float speed = 1f;
-    [SerializeField] int damage = 10;
+    [SerializeField] float damage = 50f;
    
     void Update()
     {
         transform.Translate(Vector2.right * speed * Time.deltaTime);
     }
 
-    public int GetDamage()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        return damage;
+        var health = collision.GetComponent<Health>();
+        if(health != null)
+        {
+            health.DealDamage(damage);
+        }
     }
 
 }
