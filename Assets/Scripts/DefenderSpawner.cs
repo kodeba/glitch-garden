@@ -14,12 +14,20 @@ public class DefenderSpawner : MonoBehaviour
     private Vector2 GetSquareClick()
     {
         Vector2 clickPos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
-        return Camera.main.ScreenToWorldPoint(clickPos);
+        Vector2 worldPos = Camera.main.ScreenToWorldPoint(clickPos);
+        return SnapToGrid(worldPos);
     }
 
-    private void Spawn(Vector2 worldPos)
+    private Vector2 SnapToGrid(Vector2 rawWorldPos)
     {
-        Instantiate(defender, worldPos, Quaternion.identity);
+        float newX = Mathf.RoundToInt(rawWorldPos.x);
+        float newY = Mathf.RoundToInt(rawWorldPos.y);
+        return new Vector2(newX, newY);
+    }
+
+    private void Spawn(Vector2 roundedPos)
+    {
+        Instantiate(defender, roundedPos, Quaternion.identity);
     }
 
 
