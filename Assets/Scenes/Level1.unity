@@ -283,7 +283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 065e108bcdd034ade81ba55a4a4d486f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  star: 100
+  stars: 100
 --- !u!1 &716357910
 GameObject:
   m_ObjectHideFlags: 0
@@ -1642,12 +1642,12 @@ PrefabInstance:
     - target: {fileID: 5808279064097402979, guid: 40943e5dc5054444fbe97d6d97baec10,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.386
+      value: 5.79
       objectReference: {fileID: 0}
     - target: {fileID: 5808279064097402979, guid: 40943e5dc5054444fbe97d6d97baec10,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.224
+      value: 2.36
       objectReference: {fileID: 0}
     - target: {fileID: 5808279064097402979, guid: 40943e5dc5054444fbe97d6d97baec10,
         type: 3}
@@ -1698,6 +1698,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Lizard
+      objectReference: {fileID: 0}
+    - target: {fileID: 5808279064097402982, guid: 40943e5dc5054444fbe97d6d97baec10,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40943e5dc5054444fbe97d6d97baec10, type: 3}
