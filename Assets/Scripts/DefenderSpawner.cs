@@ -6,9 +6,21 @@ public class DefenderSpawner : MonoBehaviour
 {
     Defender defender;
 
+    private StarDisplay starDisplay;
+
+    private void Start()
+    {
+        starDisplay = FindObjectOfType<StarDisplay>();
+    }
+
     private void OnMouseDown()
     {
-        Spawn(GetSquareClick());
+        var cost = defender.GetStarCost();
+        if (starDisplay.HaveEnoughtStars(cost))
+        {
+            Spawn(GetSquareClick());
+            starDisplay.SpendStars(cost);
+        }
     }
 
     private Vector2 GetSquareClick()
