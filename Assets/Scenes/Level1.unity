@@ -1259,6 +1259,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6566754858142164345, guid: 205e4f6a7fe684eefb5567038680b578,
+        type: 3}
+      propertyPath: minSpawnDelay
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6566754858142164345, guid: 205e4f6a7fe684eefb5567038680b578,
+        type: 3}
+      propertyPath: maxSpawnDelay
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6566754858142164346, guid: 205e4f6a7fe684eefb5567038680b578,
         type: 3}
       propertyPath: m_LocalPosition.x
