@@ -2009,15 +2009,19 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 601987697, guid: 40943e5dc5054444fbe97d6d97baec10, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5808279064097402979, guid: 40943e5dc5054444fbe97d6d97baec10,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.54
+      value: 5.5
       objectReference: {fileID: 0}
     - target: {fileID: 5808279064097402979, guid: 40943e5dc5054444fbe97d6d97baec10,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.98
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5808279064097402979, guid: 40943e5dc5054444fbe97d6d97baec10,
         type: 3}
