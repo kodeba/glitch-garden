@@ -421,7 +421,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &716357911
 Transform:
   m_ObjectHideFlags: 0
@@ -2012,12 +2012,12 @@ PrefabInstance:
     - target: {fileID: 5808279064097402979, guid: 40943e5dc5054444fbe97d6d97baec10,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.79
+      value: 5.54
       objectReference: {fileID: 0}
     - target: {fileID: 5808279064097402979, guid: 40943e5dc5054444fbe97d6d97baec10,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: 4.98
       objectReference: {fileID: 0}
     - target: {fileID: 5808279064097402979, guid: 40943e5dc5054444fbe97d6d97baec10,
         type: 3}
@@ -2068,11 +2068,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Lizard
-      objectReference: {fileID: 0}
-    - target: {fileID: 5808279064097402982, guid: 40943e5dc5054444fbe97d6d97baec10,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40943e5dc5054444fbe97d6d97baec10, type: 3}
