@@ -19,7 +19,7 @@ public class DefenderSpawner : MonoBehaviour
         if (starDisplay.HaveEnoughtStars(cost))
         {
             Spawn(GetSquareClick());
-            starDisplay.SpendStars(cost);
+            //starDisplay.SpendStars(cost);
         }
     }
 
