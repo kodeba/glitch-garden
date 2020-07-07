@@ -9,18 +9,22 @@ public class LevelTimer : MonoBehaviour
     [Tooltip("leve time in second")]
     [SerializeField] int levelTime = 10;
 
+    bool triggeredLevelFinished = false;
+
 
     void Update()
     {
+        if (triggeredLevelFinished)
+        {
+            return;
+        }
+
         GetComponent<Slider>().value = Time.timeSinceLevelLoad / levelTime;
 
         if(Time.timeSinceLevelLoad >= levelTime)
         {
-            var levelControl = FindObjectOfType<LevelControl>();
-            if (!levelControl.IsLevelTimerFinised())
-            {
-                levelControl.LevelTimerFinised();
-            }
+            FindObjectOfType<LevelControl>().LevelTimerFinised();
+            triggeredLevelFinished = true;
         }
     }
 }

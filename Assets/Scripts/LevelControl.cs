@@ -19,7 +19,11 @@ public class LevelControl : MonoBehaviour
         numberOfAttacker--;
         if(numberOfAttacker <= 0 && levelTimerFinished)
         {
-            FindObjectOfType<Navigator>().WinScene();
+            var navigator = FindObjectOfType<Navigator>();
+            if (navigator)
+            {
+                navigator.WinScene();
+            }
         }
     }
 
