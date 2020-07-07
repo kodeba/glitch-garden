@@ -10,6 +10,16 @@ public class Attacker : MonoBehaviour
 
     GameObject currentTarget;
 
+    private void Awake()
+    {
+        FindObjectOfType<LevelControl>().AttackerSpawned();
+    }
+
+    private void OnDestroy()
+    {
+        FindObjectOfType<LevelControl>().AttackerKilled();
+    }
+
     void Update()
     {
         transform.Translate(Vector2.left * currentSpeed * Time.deltaTime);

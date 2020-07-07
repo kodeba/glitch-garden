@@ -20,6 +20,10 @@ public class AttackerSpawner : MonoBehaviour
             yield return new WaitForSeconds(Random.Range(minSpawnDelay, maxSpawnDelay));
             var attacker = Instantiate(attackerPrefabs[attackerIndex], transform.position, Quaternion.identity) as Attacker;
             attacker.transform.parent = transform;
+            if (FindObjectOfType<LevelControl>().IsLevelTimerFinised())
+            {
+                isSpawn = false;
+            }
         }
     }
 

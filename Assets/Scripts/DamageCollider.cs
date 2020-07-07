@@ -17,6 +17,7 @@ public class DamageCollider : MonoBehaviour
         if (attacker)
         {
             playerLifeDisplay.GetHit();
+            Destroy(collision.gameObject);
         }
     }
 
