@@ -33,7 +33,12 @@ public class Navigator : MonoBehaviour
 
     public void LoadGameOver()
     {
-        StartCoroutine(GameOverCoroutine());
+        StartCoroutine(DelayBeforeLoad("GameOver"));
+    }
+
+    public void WinScene()
+    {
+        StartCoroutine(DelayBeforeLoad("WinScene"));
     }
 
     public void Quit()
@@ -41,10 +46,10 @@ public class Navigator : MonoBehaviour
         Application.Quit();
     }
 
-    private IEnumerator GameOverCoroutine()
+    private IEnumerator DelayBeforeLoad(string scene)
     {
         yield return new WaitForSeconds(1);
-        SceneManager.LoadScene("GameOver");
+        SceneManager.LoadScene(scene);
     }
 
     private IEnumerator GameStartCoroutine()
